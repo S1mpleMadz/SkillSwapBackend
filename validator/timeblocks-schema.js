@@ -2,12 +2,12 @@ import joi from "joi";
 
 const schema = {};
 
-schema.mutableFields = ["timeblocks"];
+schema.mutableFields = ["TimeBlock"];
 
 schema.recordSchema = joi
   .object({
-    SkillID: joi.number().integer(),
-    SkillName: joi.string(),
+    TimeBlockID: joi.number().integer(),
+    TimeBlock: joi.string(),
   })
   .required()
   .unknown(true);
