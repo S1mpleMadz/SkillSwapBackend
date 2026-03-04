@@ -1,0 +1,8 @@
+## local hosted
+DB_HOST=localhost
+DB_USER=root
+DB_PSWD=
+DB_NAME=skillswap 
+DB_PORT=3306
+PORT=5000
+ 
