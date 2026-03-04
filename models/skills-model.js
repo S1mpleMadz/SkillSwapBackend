@@ -12,7 +12,14 @@ model.buildReadQuery = (id, variant) => {
   let sql = `SELECT * FROM ${model.table}`;
   let data = { ID: id };
 
-  sql += ` WHERE skills.SkillID=:ID`
+
+  switch (variant) {
+    case "SkillID":
+      sql += ` WHERE skills.SkillID=:ID`;
+      break;
+    default:
+      break;
+  }
 
   return { sql, data };
 };
