@@ -8,6 +8,8 @@ model.buildReadQuery = (id, variant) => {
   let sql = `SELECT * FROM ${model.table}`;
   let data = { ID: id };
 
+  sql += ` WHERE skills.SkillID=:ID`;
+
   return { sql, data };
 };
 
